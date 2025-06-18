@@ -24,3 +24,11 @@ Este projeto é um sistema completo para agendamento online em barbearias, desen
 1. Clone o repositório:
    ```bash
    git clone https://github.com/Joao-CoderDM/Sistema-de-Agendamento.git
+   
+## Licença
+
+Este projeto é de código aberto para uso pessoal, educacional e não comercial.
+
+Se você deseja utilizar este sistema para fins comerciais ou lucrativos (como em barbearias ou empresas), entre em contato comigo para discutir termos de licenciamento e autorização.
+
+Contato: joao@seuemail.com (ou seu perfil GitHub)
