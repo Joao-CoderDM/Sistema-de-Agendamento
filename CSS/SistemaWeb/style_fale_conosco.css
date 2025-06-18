@@ -1,0 +1,250 @@
+/* Estilo para o título */
+h1 {
+    font-family: 'VELISTA', sans-serif;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Melhorias gerais para a página de feedback */
+.feedback-hero-section {
+    background-color: #121212;
+    position: relative;
+    padding: 60px 0 40px;
+    overflow: hidden;
+}
+
+.feedback-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../Imagens/pattern.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.title-underline {
+    height: 3px;
+    width: 80px;
+    background: linear-gradient(to right, #FFD700, transparent);
+}
+
+/* Estilo para o formulário */
+form {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-card {
+    background-color: rgba(25, 25, 25, 0.9);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #FFD700;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Estilização dos campos de formulário */
+.form-control {
+    background-color: rgba(30, 30, 30, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff !important; /* Garantir que o texto seja sempre branco */
+    border-radius: 8px;
+    padding: 12px;
+    transition: all 0.3s ease;
+    caret-color: #FFD700; /* Cursor de texto dourado para melhor visibilidade */
+}
+
+.form-control:focus {
+    background-color: rgba(40, 40, 40, 0.8); /* Fundo um pouco mais claro quando em foco */
+    border-color: rgba(255, 215, 0, 0.5); /* Borda dourada quando em foco */
+    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+    color: #fff !important;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Placeholder mais visível */
+}
+
+/* Estilização de labels */
+.form-label {
+    color: #ddd;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Botão de envio com efeito especial */
+.btn-feedback-submit {
+    background: linear-gradient(45deg, #FFD700, #e6c300);
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+    position: relative;
+    overflow: visible;
+    margin: 15px auto;
+    z-index: 5;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-feedback-submit:hover,
+.btn-feedback-submit:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5);
+    color: #000;
+}
+
+.btn-feedback-submit:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
+    background: transparent;
+    border-radius: 60px;
+}
+
+.btn-feedback-submit:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: transparent;
+    border-radius: 60px;
+    animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+    }
+}
+
+/* Estilização para as estrelas de avaliação */
+.star-rating {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.rating-group {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+}
+
+.rating-input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.rating-label {
+    cursor: pointer;
+    padding: 0 5px;
+    font-size: 24px;
+    color: #888;
+    transition: all 0.3s ease;
+}
+
+.rating-label:hover,
+.rating-label:hover ~ .rating-label,
+.rating-input:checked ~ .rating-label {
+    color: #FFD700;
+    transform: scale(1.2);
+}
+
+.caracteres-restantes {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+/* Espaço antes do footer */
+.pre-footer-space {
+    margin-bottom: 80px;
+}
+
+/* Animação para aparecer formulário */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para os meios de comunicação */
+h3 {
+    font-family: 'VELISTA', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+@font-face {
+    font-family: 'VELISTA';
+    src: url(../Fontes/VELISTA.otf);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'VELISTA', sans-serif;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .feedback-card {
+        padding: 25px;
+    }
+    
+    .btn-feedback-submit {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+    
+    .rating-label {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .rating-label {
+        font-size: 1.5rem;
+        margin-right: 5px;
+    }
+}

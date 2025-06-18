@@ -1,0 +1,242 @@
+/* Estilos de responsividade global para o site */
+
+/* Base para dispositivos médios (tablets) */
+@media (max-width: 991.98px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Ajustes para o carrossel de depoimentos */
+    #testimonialCarousel .col-md-4 {
+        margin-bottom: 20px;
+    }
+    
+    /* Ajustes para cards na página de serviços */
+    .card-deck .card {
+        flex: 0 0 48%;
+        margin: 0 1% 20px;
+    }
+    
+    /* Ajustes para imagens em geral */
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Ajustes para cards dos profissionais */
+    .d-flex.justify-content-center .card {
+        width: 15rem !important;
+    }
+    
+    .d-flex.justify-content-center .card img {
+        height: auto;
+        object-fit: cover;
+    }
+    
+    /* Ajuste do espaçamento em seções */
+    .section-spacing {
+        margin-top: 4rem !important;
+        margin-bottom: 3rem !important;
+    }
+    
+    /* Ajustes para o carrossel de depoimentos */
+    .testimonials-section {
+        padding: 30px 0;
+    }
+    
+    .feedback-card {
+        height: auto;
+        min-height: 300px;
+    }
+}
+
+/* Para dispositivos pequenos (celulares) */
+@media (max-width: 767.98px) {
+    .section-spacing {
+        margin-top: 3rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    /* Feedback cards em tela cheia para celulares */
+    .feedback-card {
+        height: auto;
+        min-height: 250px;
+    }
+    
+    /* Ajustes para imagens em geral */
+    .img-fluid {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Ajustes para cards na página sobre nós */
+    .d-flex.justify-content-center {
+        flex-wrap: wrap !important;
+    }
+    
+    .d-flex.justify-content-center .card {
+        width: 100% !important;
+        max-width: 280px;
+        margin: 0 auto 20px !important;
+    }
+    
+    .d-flex.justify-content-center .card img {
+        height: auto;
+        max-height: 220px;
+        object-fit: cover;
+    }
+    
+    /* Ajustes para a tabela de usuários */
+    .table-wrapper {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    
+    /* Ajustes para formulários */
+    .container.mt-5.d-flex.justify-content-center {
+        flex-direction: column;
+    }
+    
+    .container.mt-5.d-flex.justify-content-center .card {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+    
+    .container.mt-5.d-flex.justify-content-center form {
+        width: 100%;
+    }
+    
+    /* Ajustes para o footer */
+    footer .text-end {
+        text-align: center !important;
+        margin-top: 1rem;
+    }
+    
+    footer .col-md-6 {
+        text-align: center;
+    }
+    
+    /* Ajustes para o carrossel de depoimentos */
+    .carousel-item .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    #testimonialCarousel .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    /* Ajustes para cards de serviços */
+    .col-md-4.text-center .card img {
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    /* Ajuste para imagens na página inicial */
+    .container.mt-5 .row .col-md-6 img {
+        max-height: 350px;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+    
+    /* Regras específicas para a imagem do João Silva */
+    .img-joao {
+        height: 220px !important;
+    }
+}
+
+/* Para dispositivos muito pequenos */
+@media (max-width: 575.98px) {
+    body {
+        padding-top: 56px; /* Reduzido para navbar menor */
+    }
+    
+    .btn-agendar {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    /* Ajustes para o carrossel de depoimentos */
+    .feedback-card h4 {
+        font-size: 1rem;
+    }
+    
+    .feedback-text {
+        font-size: 0.85rem;
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+    }
+    
+    /* Ajustes para cards dos profissionais */
+    .d-flex.justify-content-center .card {
+        max-width: 240px;
+    }
+    
+    .d-flex.justify-content-center .card img {
+        max-height: 180px;
+    }
+    
+    /* Ajustes para imagens de serviço */
+    .col-md-4.text-center .card img {
+        height: 180px;
+    }
+    
+    /* Espaçamento maior do topo para mobile */
+    .container.mt-5 {
+        margin-top: 2rem !important;
+    }
+    
+    /* Ajuste para textos em banners */
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    /* Regras específicas para a imagem do João Silva */
+    .img-joao {
+        height: 200px !important;
+    }
+}
+
+/* Regras específicas para a imagem do João Silva */
+.img-joao {
+    object-position: top center !important;
+}

@@ -1,0 +1,77 @@
+/* Estilos para a página de gerenciamento de usuários */
+
+/* Estilização dos cards */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Estilos para os cards de estatísticas */
+.card.bg-primary, 
+.card.bg-success, 
+.card.bg-info, 
+.card.bg-danger {
+    transition: transform 0.2s ease;
+}
+
+.card.bg-primary:hover, 
+.card.bg-success:hover, 
+.card.bg-info:hover, 
+.card.bg-danger:hover {
+    transform: translateY(-5px);
+}
+
+.card .card-title {
+    font-size: 1.1rem;
+}
+
+.card .display-4 {
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+/* Botões de ação */
+.btn-editar, .btn-excluir {
+    transition: transform 0.2s ease;
+}
+
+.btn-editar:hover, .btn-excluir:hover {
+    transform: translateY(-2px);
+}
+
+/* Estilização das tabelas */
+.table {
+    margin-bottom: 0;
+}
+
+.table-responsive {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo para badges de tipo de usuário */
+.badge {
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+}

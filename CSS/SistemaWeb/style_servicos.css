@@ -1,0 +1,412 @@
+@font-face {
+    font-family: 'VELISTA';
+    src: url(../Fontes/VELISTA.otf);
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 70px; /* Ajuste conforme a altura do cabeçalho */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'VELISTA', sans-serif;
+}
+
+.container {
+    flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+}
+
+/* Seção herói (banner principal) */
+.hero-section {
+    padding: 80px 0;
+    position: relative;
+    background-color: rgba(20, 20, 20, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 50px;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.hero-image {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: perspective(800px) rotateY(-5deg);
+    transition: transform 0.5s ease;
+}
+
+.hero-image:hover {
+    transform: perspective(800px) rotateY(0);
+}
+
+/* Títulos de seção */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.section-description {
+    color: #aaa;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.section-divider {
+    height: 3px;
+    width: 80px;
+    background: linear-gradient(to right, transparent, #fff, transparent);
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+/* Cards de serviços com imagem */
+.servico-card {
+    background-color: rgb(14, 14, 14);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.servico-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.servico-card .card-img-top {
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: brightness(0.9);
+}
+
+.servico-card:hover .card-img-top {
+    transform: scale(1.05);
+    filter: brightness(1);
+}
+
+.card-title {
+    font-family: 'VELISTA', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.card-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.card-price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 10;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Cards simples (sem imagem) */
+.servico-simples {
+    background-color: rgba(25, 25, 25, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    height: 100%;
+}
+
+.servico-simples:hover {
+    transform: translateY(-5px) scale(1.02);
+    background-color: rgba(30, 30, 30, 0.8);
+}
+
+.servico-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #FFD700;
+    transition: transform 0.3s ease;
+}
+
+.servico-simples:hover .servico-icon {
+    transform: scale(1.2);
+}
+
+/* Seção de promoção */
+.promocao-section {
+    padding: 50px 0;
+    margin: 70px 0;
+    background-color: rgba(20, 20, 20, 0.8);
+    position: relative;
+    overflow: hidden;
+}
+
+.promocao-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../Imagens/pattern.png');
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.promo-card {
+    background: linear-gradient(45deg, #111, #222);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-left: 5px solid #FFD700;
+    position: relative;
+    z-index: 1;
+}
+
+.promo-card h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.promo-description {
+    font-size: 1.3rem;
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+.promo-price {
+    margin-bottom: 20px;
+}
+
+.old-price {
+    font-size: 1.2rem;
+    color: #888;
+    text-decoration: line-through;
+    margin-right: 15px;
+}
+
+.new-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.promo-text {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 60px 0;
+    background-color: rgba(20, 20, 20, 0.7);
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-bottom: 60px;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Imagens/pattern.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.cta-text {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+/* Botões */
+.btn-agendar {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #FFD700;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-agendar:hover {
+    background-color: #FFD700;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos específicos para o botão de hero section */
+.hero-section .btn-agendar {
+    padding: 12px 28px;
+    font-size: 15px;
+}
+
+/* Botões outline */
+.btn-outline-light {
+    border: 1px solid #fff;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Seções */
+.servicos-principais, .servicos-adicionais {
+    padding: 50px 0;
+}
+
+/* Responsividade */
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding: 50px 0;
+        margin-bottom: 30px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .promo-card {
+        padding: 30px;
+    }
+    
+    .promo-card h2 {
+        font-size: 2rem;
+    }
+    
+    .old-price {
+        font-size: 1rem;
+    }
+    
+    .new-price {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        text-align: center;
+        padding: 40px 0;
+    }
+    
+    .hero-section .btn-agendar {
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .servico-card .card-img-top {
+        height: 180px;
+    }
+    
+    .promo-card {
+        padding: 20px;
+    }
+    
+    .promo-card h2 {
+        font-size: 1.8rem;
+    }
+    
+    .promo-description {
+        font-size: 1.1rem;
+    }
+    
+    .cta-title {
+        font-size: 1.8rem;
+    }
+    
+    .cta-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .promo-card h2 {
+        font-size: 1.5rem;
+    }
+    
+    .new-price {
+        font-size: 1.5rem;
+    }
+    
+    .cta-title {
+        font-size: 1.5rem;
+    }
+    
+    .btn-agendar {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

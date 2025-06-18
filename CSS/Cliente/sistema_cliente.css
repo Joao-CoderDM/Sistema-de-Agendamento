@@ -1,0 +1,490 @@
+/* Estilização personalizada para o painel do cliente */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main .container-fluid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.welcome-banner {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.date-display {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #f8f9fa;
+}
+
+.overview-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.overview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.icon-container {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.bg-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.bg-success {
+    background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%) !important;
+}
+
+.bg-info {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+}
+
+.bg-warning {
+    background: linear-gradient(135deg, #ffc107 0%, #ffca2c 100%) !important;
+}
+
+.feature-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-card {
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 1px solid #e9ecef;
+}
+
+.appointment-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.appointment-time {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #495057;
+}
+
+.empty-state {
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff !important;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.nav-divider {
+    height: 1.5rem;
+    width: 1px;
+    background-color: #e9ecef;
+    margin: 0 0.5rem;
+}
+
+/* Cards customizados */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 12px 12px 0 0 !important;
+    padding: 1.25rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Botões customizados */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.btn-outline-primary {
+    border: 2px solid #667eea;
+    color: #667eea;
+    background: transparent;
+}
+
+.btn-outline-primary:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-secondary {
+    border: 2px solid #6c757d;
+    color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-success {
+    border: 2px solid #28a745;
+    color: #28a745;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-danger {
+    border: 2px solid #dc3545;
+    color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Badges */
+.badge {
+    font-size: 0.75em;
+    padding: 0.5em 0.75em;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.badge.fs-6 {
+    font-size: 0.9rem !important;
+    padding: 0.6em 1em;
+}
+
+/* Tabelas */
+.table {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.table th {
+    border-top: none;
+    font-weight: 600;
+    color: #495057;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    padding: 1rem 0.75rem;
+}
+
+.table td {
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1rem 0.75rem;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    padding: 0.5rem 0;
+}
+
+.dropdown-item {
+    padding: 0.75rem 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+}
+
+.dropdown-item i {
+    width: 20px;
+    text-align: center;
+}
+
+/* Notificações */
+.position-relative .badge {
+    font-size: 0.6rem;
+}
+
+/* Estados dos cards */
+.status-agendado {
+    background: linear-gradient(135deg, #fff4d9 0%, #ffffff 100%);
+    border-left: 4px solid #ffc107;
+}
+
+.status-confirmado {
+    background: linear-gradient(135deg, #d4edda 0%, #ffffff 100%);
+    border-left: 4px solid #28a745;
+}
+
+.status-concluido {
+    background: linear-gradient(135deg, #e2e3e5 0%, #ffffff 100%);
+    border-left: 4px solid #6c757d;
+}
+
+.status-cancelado {
+    background: linear-gradient(135deg, #f8d7da 0%, #ffffff 100%);
+    border-left: 4px solid #dc3545;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.5s ease;
+}
+
+/* Toast notifications */
+.toast-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    min-width: 300px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 991.98px) {
+    main .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .welcome-banner {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    .overview-card {
+        margin-bottom: 1rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .appointment-time {
+        font-size: 1rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.8rem;
+    }
+    
+    .empty-state {
+        padding: 1.5rem 1rem;
+    }
+    
+    .icon-container {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+/* Melhorias de acessibilidade */
+.btn:focus,
+.card:focus,
+.dropdown-item:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Efeitos especiais */
+.card-header h5 i {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Layout grid melhorado */
+.row.g-4 > * {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+/* Footer space */
+footer {
+    flex-shrink: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+/* Active menu item */
+.navbar-nav .nav-link.active {
+    color: #667eea !important;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #667eea !important;
+}
+
+/* Estilização para serviços populares */
+.servicos-populares .table > tbody > tr.table-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+    border-left: 4px solid #ffc107;
+}
+
+.servicos-populares .badge.bg-warning.text-dark {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.servicos-populares .table td {
+    vertical-align: middle;
+    padding: 0.75rem 0.5rem;
+}
+
+.servicos-populares .table th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Destaque para o top 3 */
+.servicos-populares .table > tbody > tr:first-child {
+    background: linear-gradient(45deg, rgba(255, 215, 0, 0.1), rgba(255, 193, 7, 0.1));
+}
+
+.servicos-populares .table > tbody > tr:nth-child(2) {
+    background: linear-gradient(45deg, rgba(192, 192, 192, 0.1), rgba(169, 169, 169, 0.1));
+}
+
+.servicos-populares .table > tbody > tr:nth-child(3) {
+    background: linear-gradient(45deg, rgba(205, 127, 50, 0.1), rgba(184, 115, 51, 0.1));
+}
+
+/* Animação hover */
+.servicos-populares .table > tbody > tr:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .servicos-populares .table th,
+    .servicos-populares .table td {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.85rem;
+    }
+    
+    .servicos-populares .badge {
+        font-size: 0.7rem;
+    }
+}

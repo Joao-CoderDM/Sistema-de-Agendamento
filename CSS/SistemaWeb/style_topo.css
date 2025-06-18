@@ -1,0 +1,203 @@
+/* Estilos gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #f5f5f5;
+    background-color: #121212;
+    padding-top: 70px;
+}
+
+/* Importação da fonte Ratio Modern */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); /* Usando Playfair Display como substituto para Ratio Modern */
+
+.navbar {
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: rgba(33,37,41,0.95) !important;
+    border-bottom: 4px solid #fff; /* Adiciona uma borda inferior */
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+.navbar-dark {
+    background-color: #121212 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #f5f5f5 !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 5px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #FFD700 !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #FFD700;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 70%;
+}
+
+.navbar-brand {
+    font-family: 'Ratio Modern', 'Playfair Display', serif; /* Adicionado Ratio Modern e Playfair Display como fallback */
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+}
+
+.brand-text {
+    margin-left: 10px;
+    line-height: 1.2;
+    vertical-align: middle;
+}
+
+.logotipo {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 10px rgba(255,215,0,0.7);
+    border: 1px solid #fff;
+    margin-right: 10px;
+}
+
+.btn-agendar {
+    background: linear-gradient(45deg, #FFD700, #e6c300);
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 50px;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-agendar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,215,0,0.4);
+}
+
+/* Versão menor do botão para o menu */
+.btn-agendar.btn-sm {
+    padding: 5px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Estilos do Dropdown */
+.dropdown-menu {
+    background-color: #212529;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 0.5rem 0;
+    min-width: 200px;
+    z-index: 1021;
+}
+
+.dropdown-item {
+    color: #f5f5f5;
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #343a40;
+    color: #FFD700;
+}
+
+.dropdown-divider {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin: 0.3rem 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 991px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .btn-agendar {
+        margin: 10px 0;
+        display: block;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+    
+    .nav-link {
+        padding: 0.8rem 0;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .dropdown-menu {
+        background-color: #343a40;
+        border: none;
+        box-shadow: none;
+        padding-left: 2rem;
+        margin-top: 0;
+    }
+    
+    /* Ajuste para o título nas páginas de login/cadastro */
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    body {
+        padding-top: 60px; /* Menor padding no mobile */
+    }
+    
+    .navbar-dark .navbar-toggler {
+        border-color: rgba(255,255,255,0.5);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar .container-fluid {
+        padding: 0 10px;
+    }
+    
+    body {
+        padding-top: 60px; /* Menor padding no mobile */
+    }
+    
+    .navbar-dark .navbar-toggler {
+        border-color: rgba(255,255,255,0.5);
+    }
+    
+    .btn-agendar {
+        margin: 10px 0;
+        display: block;
+        text-align: center;
+    }
+}

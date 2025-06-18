@@ -1,0 +1,249 @@
+/* Estilos para o calendário profissional */
+.calendar {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 10px;
+}
+
+.weekday {
+    text-align: center;
+    font-weight: 500;
+    color: #495057;
+    font-size: 0.85rem;
+    padding: 5px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    color: #212529;
+    text-decoration: none;
+    border: 1px solid #dee2e6;
+    transition: all 0.2s ease;
+}
+
+.calendar-day:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.calendar-day.empty {
+    background-color: transparent;
+    border: none;
+    cursor: default;
+}
+
+.calendar-day.empty:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.calendar-day.today {
+    background-color: #fff8e1;
+    border: 2px solid #ffc107;
+    font-weight: bold;
+}
+
+.calendar-day.selected {
+    background-color: #fff3cd;
+    border: 2px solid #ffc107;
+}
+
+.calendar-day.has-events {
+    background-color: #f8f9fa;
+}
+
+.day-number {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.event-dot {
+    position: absolute;
+    bottom: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ffc107;
+    color: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.calendar-legend {
+    font-size: 0.8rem;
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.today-dot {
+    background-color: #ffc107;
+    border: 1px solid #e0a800;
+}
+
+.event-dot-sample {
+    background-color: #ffc107;
+}
+
+.day-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-height: 300px;
+}
+
+.time-slot {
+    display: flex;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+}
+
+.time-slot:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.time-slot .time {
+    width: 80px;
+    min-width: 80px;
+    background-color: #ffc107;
+    color: #212529;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.time-slot .appointment {
+    flex: 1;
+    padding: 15px;
+}
+
+.time-slot.status-agendado {
+    border-left: 4px solid #ffc107;
+}
+
+.time-slot.status-confirmado {
+    border-left: 4px solid #28a745;
+}
+
+.time-slot.status-concluido {
+    border-left: 4px solid #6c757d;
+}
+
+.time-slot.status-cancelado {
+    border-left: 4px solid #dc3545;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.appointment-details {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.appointment-details .detail {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Estilo para o calendário FullCalendar */
+#calendar {
+    margin-top: 10px;
+    min-height: 500px;
+}
+
+.fc-event {
+    cursor: pointer;
+}
+
+.fc-event:hover {
+    opacity: 0.9;
+}
+
+.dragging {
+    opacity: 0.5;
+}
+
+/* Responsividade */
+@media (max-width: 767.98px) {
+    .calendar-day {
+        font-size: 0.85rem;
+    }
+    
+    .time-slot .time {
+        width: 60px;
+        min-width: 60px;
+        font-size: 0.9rem;
+    }
+    
+    .appointment-details {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Estilos para tela de impressão */
+@media print {
+    .navbar, .breadcrumb, .btn, .card-header, .card-footer {
+        display: none !important;
+    }
+    
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .day-timeline {
+        gap: 10px;
+    }
+    
+    .time-slot {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}

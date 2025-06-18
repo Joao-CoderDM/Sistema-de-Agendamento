@@ -1,0 +1,107 @@
+footer {
+    background-color: #121212; /* Fundo escuro igual ao resto do site */
+    color: #fff; /* Texto branco */
+    padding: 40px 0 20px; /* Aumentando espaçamento vertical */
+    margin-top: 60px; /* Espaço acima do rodapé */
+    border-top: 1px solid rgba(255, 215, 0, 0.3); /* Borda dourada sutil na parte superior */
+}
+
+footer a {
+    color: #ccc; /* Links em tom mais claro */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: all 0.3s ease; /* Transição suave */
+    font-weight: 300; /* Fonte mais leve para aspecto minimalista */
+}
+
+footer a:hover {
+    color: #FFD700; /* Links ficam dourados ao passar o mouse */
+    text-decoration: none; /* Mantém sem sublinhado */
+    transform: translateY(-2px); /* Pequena elevação ao passar o mouse */
+}
+
+footer h5 {
+    color: #FFD700; /* Títulos em dourado */
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+social-icons a:hover {
+    background-color: rgba(255, 215, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+footer address p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #aaa; /* Tom de cinza claro */
+    font-style: normal; /* Remover itálico padrão */
+}
+
+footer address i {
+    color: #FFD700; /* Ícones dourados */
+    margin-right: 8px;
+}
+
+footer hr {
+    border-color: rgba(255, 255, 255, 0.05); /* Linha separadora sutil */
+    margin: 25px 0 15px;
+}
+
+footer .copyright {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Ajustes responsivos para o footer */
+@media (max-width: 767.98px) {
+    footer {
+        padding: 30px 0 20px; /* Menos padding em dispositivos menores */
+        text-align: center; /* Centraliza em dispositivos móveis */
+    }
+    
+    footer .row {
+        flex-direction: column;
+    }
+    
+    footer .col-md-4 {
+        margin-bottom: 30px;
+    }
+    
+    .social-icons {
+        justify-content: center;
+        display: flex;
+    }
+    
+    footer hr {
+        margin: 15px 0;
+    }
+}

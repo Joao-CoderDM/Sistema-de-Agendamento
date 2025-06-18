@@ -1,0 +1,211 @@
+/* Estilos para o painel do administrador */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body tenha no mínimo a altura da viewport */
+}
+
+main {
+    flex: 1 0 auto; /* Faz com que o main ocupe todo o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Garante largura total */
+}
+
+main .container-fluid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Estilização do banner de boas-vindas */
+.welcome-banner {
+    background: linear-gradient(135deg, #353535 0%, #111111 100%);
+    color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.date-display {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #f8f9fa;
+}
+
+/* Cards de resumo */
+.overview-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease;
+}
+
+.overview-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+.bg-primary {
+    background-color: #4a6cf7 !important;
+}
+
+.bg-success {
+    background-color: #46d39a !important;
+}
+
+.bg-info {
+    background-color: #50b5ff !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+/* Módulos de gestão */
+.section-header {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon-wrapper {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 24px;
+    color: #495057;
+}
+
+.feature-card:hover .feature-icon-wrapper {
+    background-color: #212529;
+    color: white;
+}
+
+/* Tabela de agendamentos */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.avatar-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #6c757d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff !important;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.btn-outline-primary {
+    border-color: #212529;
+    color: #212529;
+}
+
+.btn-outline-primary:hover {
+    background-color: #212529;
+    color: #fff;
+    border-color: #212529;
+}
+
+.nav-divider {
+    height: 1.5rem;
+    width: 1px;
+    background-color: #e9ecef;
+    margin: 0 0.5rem;
+}
+
+/* Status de agendamentos */
+.status-agendado {
+    background-color: #fff4d9;
+    color: #856404;
+    border-left: 4px solid #ffc107;
+}
+
+.status-confirmado {
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 4px solid #28a745;
+}
+
+.status-concluido {
+    background-color: #e2e3e5;
+    color: #383d41;
+    border-left: 4px solid #6c757d;
+}
+
+.status-cancelado {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left: 4px solid #dc3545;
+}
+
+/* Adaptações para dispositivos menores */
+@media (max-width: 767.98px) {
+    .welcome-banner {
+        text-align: center;
+    }
+    
+    .feature-card {
+        margin-bottom: 20px;
+    }
+    
+    .date-display {
+        text-align: center;
+        margin-top: 15px;
+    }
+}

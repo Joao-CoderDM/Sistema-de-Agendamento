@@ -1,0 +1,911 @@
+.container {
+    flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Suaviza as bordas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+.btn-agendar {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 30px; /* Aumentado de 20px para 30px para garantir curvatura adequada */
+    padding: 10px 25px; /* Ajustado o padding horizontal */
+    font-size: 16px;
+    transition: all 0.3s ease; /* Alterado para incluir todas as propriedades na transição */
+    position: relative; /* Adicionado para garantir que os efeitos respeitem os limites */
+    overflow: visible !important; /* Garantindo que o efeito não seja cortado */
+    z-index: 5; /* Aumentando o z-index para garantir visibilidade */
+    margin: 10px; /* Adicionando margem para o efeito ter espaço */
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Leve brilho ao redor do botão */
+}
+
+.btn-agendar:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-3px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); /* Brilho aumentado ao passar o mouse */
+}
+
+/* Botão com efeito especial para evitar corte nos efeitos */
+.btn-agendar-special {
+    background: linear-gradient(45deg, #FFD700, #e6c300);
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+    position: relative;
+    overflow: visible;
+    margin: 5px auto;
+    z-index: 5;
+    display: inline-block;
+}
+
+.btn-agendar-special:hover,
+.btn-agendar-special:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5);
+    color: #000;
+}
+
+.btn-agendar-special:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
+    background: transparent;
+    border-radius: 60px;
+}
+
+.btn-agendar-special:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: transparent;
+    border-radius: 60px;
+    animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+    }
+}
+
+.card {
+    background-color: rgb(14, 14, 14); /* Cor de fundo dos cartões */
+    color: #fff; /* Cor do texto dos cartões */
+    border: none; /* Remove a borda dos cartões */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra dos cartões */
+    margin-bottom: 20px; /* Espaço entre os cartões */
+    transition: transform 0.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600; /* Poppins Semi Bold */
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.card-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200; /* Poppins Extra Light */
+    font-size: 1rem;
+    color: #fff;
+}
+.carousel-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.carousel-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+.carousel-inner img {
+    max-height: 400px; /* Ajuste a altura conforme necessário */
+    object-fit: cover; /* Garante que a imagem cubra o contêiner */
+    border-radius: 20px; /* Arredonda os cantos das imagens do carrossel */
+}
+.img-lateral {
+    width: 100%; /* Ajuste a largura conforme necessário */
+    max-height: 700px; /* Ajuste a altura conforme necessário */
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 40px; /* Espaço entre a imagem e o conteúdo */
+}
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+@font-face {
+    font-family: 'VELISTA';
+    src: url(../Fontes/VELISTA.otf);
+}
+
+
+/* Estilo para a tabela */
+.table {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%; /* Faz a tabela ocupar toda a largura disponível */
+}
+
+.table th {
+    text-align: center;
+    background-color: #333; /* Fundo escuro para o cabeçalho */
+    color: #fff; /* Texto branco */
+    padding: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* Permite que o texto na tabela quebre em várias linhas */
+.table td {
+    white-space: normal; /* Permite quebras de linha automáticas */
+    word-wrap: break-word; /* Quebra palavras longas */
+    text-align: left; /* Alinha o texto à esquerda para melhor leitura */
+    padding: 10px; /* Adiciona espaçamento interno */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #2c2c2c; /* Fundo para linhas ímpares */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #1a1a1a; /* Fundo para linhas pares */
+}
+
+.table-striped tbody tr:hover {
+    background-color: #444; /* Destaque ao passar o mouse */
+}
+
+.table-responsive {
+    overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+    border-radius: 10px;
+    padding: 10px; /* Adiciona espaçamento interno */
+}
+
+/* Ajusta a largura da tabela */
+.container .table-responsive {
+    max-width: 95%; /* Faz a tabela ocupar 95% da largura do container */
+    margin: 0 auto; /* Centraliza a tabela */
+}
+
+.mt-6 {
+    margin-top: 5rem !important;
+}
+
+.section-spacing {
+    margin-top: 6rem !important;
+    margin-bottom: 4rem !important;
+}
+
+/* Estilos atualizados para a seção de avaliações */
+.text-warning {
+    color: #ffc107 !important; /* Mantendo estrelas douradas para destaque */
+}
+
+.quote-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    opacity: 0.2;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: #000; /* Mudando para preto ao passar o mouse */
+}
+
+/* Adicionando estilos para a seção de avaliações */
+.testimonials-section {
+    background-color: #1a1a1a; /* Fundo escuro para combinar com o tema do site */
+    color: #fff;
+    padding-bottom: 50px; /* Reduzido de 80px para diminuir o espaço */
+    position: relative;
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Imagens/pattern.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.testimonials-section h1 {
+    color: #fff;
+}
+
+.testimonials-section .card {
+    background-color: rgb(14, 14, 14); /* Mesma cor dos outros cards */
+    border: 1px solid #333; /* Borda sutil */
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.testimonials-section .card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonials-section .btn-outline-light {
+    border-color: #fff;
+    color: #fff;
+}
+
+.testimonials-section .btn-outline-light:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Ocultando os botões de navegação do carrossel */
+.testimonials-section .carousel-control-prev,
+.testimonials-section .carousel-control-next {
+    display: none; /* Oculta os controles de navegação */
+}
+
+.testimonials-section .carousel-control-prev,
+.testimonials-section .carousel-control-next {
+    opacity: 0.7;
+    width: 10%;
+}
+
+.testimonials-section .carousel-control-prev:hover,
+.testimonials-section .carousel-control-next:hover {
+    opacity: 1;
+}
+
+.testimonials-section .carousel-indicators button {
+    background-color: #555;
+    border: 2px solid #fff;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.testimonials-section .carousel-indicators button.active {
+    background-color: #fff;
+}
+
+/* Animation para a transição do carrossel */
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Estilos específicos para os cards de feedback */
+.feedback-card {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #FFD700;
+    border-radius: 15px;
+    background: linear-gradient(145deg, rgba(30,30,30,0.8), rgba(18,18,18,0.8));
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transform: translateY(0);
+    will-change: transform;
+    position: relative;
+    z-index: 1;
+}
+
+.feedback-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+/* Ajuste para o container do carrossel ter padding suficiente */
+.testimonials-section .carousel-inner {
+    padding: 15px 5px;
+    overflow: visible;
+}
+
+/* Ajuste para a linha de cards ter espaço adequado */
+#testimonialCarousel .row {
+    margin: 0 -15px;
+    padding: 10px 0;
+    overflow: visible;
+}
+
+/* Ajuste adicional para cada coluna do card */
+#testimonialCarousel .col-md-4 {
+    padding: 0 15px;
+    display: flex;
+    overflow: visible;
+}
+
+/* Ajustes para o carrossel de feedbacks */
+.testimonials-section {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 50px 0;
+    position: relative;
+}
+
+/* Controles do carrossel com maior visibilidade */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+/* Diminuindo o tamanho das bolinhas indicadoras e ajustando espaçamento */
+.carousel-indicators {
+    bottom: -50px !important; /* Aumenta a distância entre o carrossel e os indicadores */
+}
+
+/* Adicionando maior espaçamento entre os indicadores e o botão de avaliação */
+.testimonials-section .mt-4 {
+    margin-top: 3rem !important; /* Aumenta o espaço entre os indicadores e o botão */
+}
+
+/* Diminuindo o tamanho das bolinhas indicadoras e ajustando espaçamento */
+.carousel-indicators {
+    bottom: -50px !important; /* Aumenta a distância entre o carrossel e os indicadores */
+}
+
+/* Padronização dos cards no carrossel */
+#testimonialCarousel .row {
+    margin-bottom: 20px;
+}
+
+#testimonialCarousel .col-md-4 {
+    display: flex;
+}
+
+/* Regras de responsividade para o carrossel */
+@media (max-width: 991.98px) {
+    .feedback-card {
+        height: 350px; /* Um pouco maior em tablets */
+    }
+    
+    #testimonialCarousel .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 20px;
+    }
+    
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .img-lateral {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .feedback-card {
+        height: auto;
+        min-height: 280px;
+    }
+    
+    .carousel-inner img {
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #testimonialCarousel .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    .feedback-card {
+        min-height: 220px;
+    }
+    
+    .testimonials-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .carousel-indicators {
+        bottom: -30px !important;
+    }
+    
+    .img-fluid {
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .container.mt-5 .row .col-md-6 {
+        text-align: center !important;
+        margin-bottom: 2rem;
+    }
+    
+    .carousel-indicators {
+        bottom: -40px !important;
+    }
+    
+    .carousel-indicators button {
+        width: 8px !important;
+        height: 8px !important;
+    }
+    
+    .section-spacing {
+        margin-top: 3rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .feedback-text {
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+    }
+}
+
+/* Estilos para o banner principal */
+.hero-section {
+    padding: 0 0 20px 0; /* Adicionado padding inferior reduzido */
+    margin-top: 6rem; /* Aumentado de 4.5rem para 6rem para adicionar mais espaço */
+    position: relative;
+    overflow: hidden;
+}
+
+.animate-text h1, .animate-text p {
+    animation: fadeInUp 1s ease forwards;
+}
+
+.animate-text p:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.animate-text p:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.animate-text .btn {
+    animation: fadeInUp 1s ease 0.6s forwards;
+    opacity: 0;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.img-banner {
+    transform: scale(1.02);
+    transition: transform 0.8s ease;
+}
+
+.image-wrapper:hover .img-banner {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 70%);
+    pointer-events: none;
+}
+
+/* Estilos para cards de serviço */
+.service-card {
+    background: linear-gradient(145deg, rgb(24, 24, 24), rgb(18, 18, 18));
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 30px 20px;
+    padding-top: 40px;
+    margin-top: 20px;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.service-card.animate-in {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.1);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+}
+
+.service-card:hover::before {
+    top: 100%;
+    left: 100%;
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #FFD700, #e6c300);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    color: #000;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+    position: relative;
+    top: -20px;
+}
+
+.service-card .card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.service-card .card-text {
+    color: #ccc;
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.title-underline {
+    height: 4px;
+    width: 80px;
+    margin: 10px auto 30px;
+    background: linear-gradient(to right, transparent, #FFD700, transparent);
+    position: relative;
+}
+
+/* Divisor estilizado */
+.divider {
+    text-align: center;
+    margin: 20px 0; /* Reduzido de 40px para 20px */
+    height: 20px;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+}
+
+.divider span {
+    background: #121212; /* Alterado de transparent para #000 (cor de fundo do site) */
+    padding: 0 15px;
+    position: relative;
+    color: #FFD700;
+    font-size: 20px;
+}
+
+/* Espaçamento maior */
+.mt-7 {
+    margin-top: 7rem !important;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+    transform-origin: center;
+    transform-box: fill-box; /* Garante que a animação seja aplicada corretamente */
+    position: relative;
+    isolation: isolate; /* Isola o elemento para efeitos de empilhamento */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); /* Aumentado para 15px */
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+/* Estilos para a seção de avaliações */
+.testimonials-section {
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.8), rgba(10, 10, 10, 0.95));
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../Imagens/pattern.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.feedback-card {
+    background: linear-gradient(145deg, rgba(30,30,30,0.8), rgba(18,18,18,0.8));
+    border: none;
+    border-left: 4px solid #FFD700;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transform: translateY(0);
+}
+
+.feedback-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFD700, #d4af37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #000;
+}
+
+.quote-icon {
+    text-align: center;
+}
+
+.quote-icon i {
+    color: rgba(255,255,255,0.1);
+}
+
+.stars {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.feedback-text {
+    font-style: italic;
+    text-align: center;
+    color: #ddd;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.testimonials-section:hover .carousel-control-prev,
+.testimonials-section:hover .carousel-control-next {
+    opacity: 0.8;
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+.carousel-indicators {
+    bottom: -50px !important;
+}
+
+.carousel-indicators button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.3);
+    margin: 0 5px;
+}
+
+.carousel-indicators button.active {
+    background-color: #FFD700;
+    transform: scale(1.3);
+}
+
+.no-reviews {
+    padding: 40px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.empty-reviews-icon {
+    font-size: 60px;
+    color: rgba(255,255,255,0.2);
+}
+
+.btn-outline-light {
+    border-color: rgba(255,255,255,0.3);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: #FFD700;
+    border-color: #FFD700;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-agendar {
+    background: linear-gradient(45deg, #FFD700, #e6c300);
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.btn-agendar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+    color: #000;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 991.98px) {
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .service-card {
+        margin-bottom: 30px;
+    }
+    
+    .card-icon {
+        margin-top: -40px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        padding: 30px 0;
+    }
+    
+    .animate-text h1 {
+        font-size: 2rem;
+    }
+    
+    .image-wrapper {
+        margin-bottom: 30px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+    
+    .feedback-card {
+        padding: 20px;
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .testimonials-section {
+        padding: 50px 0;
+    }
+}
+
+/* Remover todas as declarações conflitantes e usar apenas esta: */
+@font-face {
+    font-family: 'VELISTA';
+    src: url('../Fontes/VELISTA.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Aplicar ao título */
+.hero-section h1,
+.display-4,
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'VELISTA', sans-serif !important;
+}

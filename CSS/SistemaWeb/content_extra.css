@@ -1,0 +1,89 @@
+/* Estilos específicos adicionais para a página content */
+.spacer {
+    height: 30px;
+}
+
+.mt-7 {
+    margin-top: 4rem;
+}
+
+.section-spacing {
+    margin-bottom: 4rem;
+}
+
+/* Estilos para avaliações */
+.feedback-card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 300px !important; /* Altura reduzida para os cards */
+    width: 100% !important; /* Garante que todos os cards tenham a mesma largura */
+    margin: 0 auto; /* Centraliza os cards na coluna */
+}
+
+.equal-height-card {
+    height: 300px !important; /* Altura reduzida e consistente */
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-content {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.feedback-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Reduzido para 5 linhas para ajustar ao card menor */
+    line-clamp: 5; /* Propriedade padrão para compatibilidade */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+
+.feedback-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.quote-icon {
+    color: #ffc107;
+    opacity: 0.3;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #ffc107;
+    color: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+/* Animações */
+.animate-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

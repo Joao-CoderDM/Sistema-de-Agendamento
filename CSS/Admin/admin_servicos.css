@@ -1,0 +1,43 @@
+/* Estilos específicos para a página de gerenciamento de serviços */
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.table-responsive {
+    border-radius: 5px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-editar, .btn-excluir {
+    transition: transform 0.2s ease;
+}
+
+.btn-editar:hover, .btn-excluir:hover {
+    transform: translateY(-2px);
+}
+
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.badge {
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 20px;
+}

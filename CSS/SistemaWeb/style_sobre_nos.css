@@ -1,0 +1,716 @@
+@font-face {
+    font-family: 'VELISTA';
+    src: url(../Fontes/VELISTA.otf);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'VELISTA', sans-serif;
+}
+
+.container {
+    flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Suaviza as bordas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+.banner-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: rgb(14, 14, 14); /* Cor de fundo dos cartões */
+    color: #fff; /* Cor do texto dos cartões */
+    border: none; /* Remove a borda dos cartões */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra dos cartões */
+    margin-bottom: 20px; /* Espaço entre os cartões */
+    transition: transform 0.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do cartão ao passar o mouse */
+}
+
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600; /* Poppins Semi Bold */
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.card-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200; /* Poppins Extra Light */
+    font-size: 1rem;
+    color: #fff;
+}
+
+.banner-text {
+    text-align: justify; /* Justifica o texto */
+}
+
+/* Ajustes para as imagens dos profissionais */
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Específico para a imagem do João Silva */
+.img-joao {
+    object-position: top center;
+}
+
+/* Banner principal com espaço adicional após o cabeçalho */
+.hero-section {
+    position: relative;
+    padding: 80px 0 50px;  
+    margin-top: 2rem; /* Adicionado espaço extra após o cabeçalho */
+    background: linear-gradient(to bottom, rgba(15, 15, 15, 0.9), rgba(10, 10, 10, 0.95));
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.about-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../Imagens/pattern.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.title-underline {
+    height: 3px;
+    width: 80px;
+    margin: 10px auto 25px;
+    background: linear-gradient(to right, transparent, #FFD700, transparent);
+}
+
+/* Estilo para a seção de história */
+.historia-section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #fff;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.section-divider {
+    height: 3px;
+    width: 80px;
+    background: linear-gradient(to right, #FFD700, transparent);
+    margin-bottom: 30px;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* Estilo para a imagem */
+.image-wrapper {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.img-banner {
+    transition: transform 0.8s ease;
+}
+
+.image-wrapper:hover .img-banner {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(255, 215, 0, 0.2), transparent);
+    pointer-events: none;
+}
+
+/* Estilo para Missão, Visão e Valores */
+.mission-vision-values {
+    padding: 60px 0;
+    background-color: rgba(18, 18, 18, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-vision-values::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../Imagens/pattern.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.mvv-card {
+    background: linear-gradient(145deg, rgba(30,30,30,0.8), rgba(18,18,18,0.8));
+    border: none;
+    border-left: 4px solid #FFD700;
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.mvv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(45deg, #FFD700, #e6c300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.icon-wrapper i {
+    font-size: 30px;
+    color: #000;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #fff;
+}
+
+.valor-item {
+    display: inline-block;
+    background-color: rgba(255, 215, 0, 0.2);
+    color: #FFD700;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.valor-item:hover {
+    background-color: rgba(255, 215, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+/* Seção Quem Somos */
+.quem-somos-section {
+    padding: 50px 0;
+    margin-bottom: 60px;
+}
+
+.about-image-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.about-image-container img {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -25px;
+    right: 30px;
+    background: linear-gradient(45deg, #FFD700, #e6c300);
+    color: #000;
+    border-radius: 10px;
+    padding: 15px 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.experience-badge .years {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.experience-badge .text {
+    font-size: 0.9rem;
+}
+
+/* Seção Missão, Visão e Valores */
+.mvv-section {
+    padding: 80px 0;
+    background-color: rgba(18, 18, 18, 0.6);
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mvv-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../Imagens/pattern.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.principio-card {
+    background: linear-gradient(145deg, rgba(30,30,30,0.8), rgba(18,18,18,0.8));
+    border: none;
+    border-left: 4px solid #FFD700;
+    border-radius: 15px;
+    padding: 10px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.principio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.principio-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(45deg, #FFD700, #e6c300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.principio-icon i {
+    font-size: 30px;
+    color: #000;
+}
+
+.principio-card .card-title {
+    color: #FFD700;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.principio-card .card-text {
+    color: #e0e0e0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.valores-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.valor-tag {
+    display: inline-block;
+    background-color: rgba(255, 215, 0, 0.2);
+    color: #FFD700;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.valor-tag:hover {
+    background-color: rgba(255, 215, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+/* Seção Equipe */
+.equipe-section {
+    padding: 50px 0;
+    margin-bottom: 60px;
+}
+
+.equipe-card {
+    background: linear-gradient(145deg, rgba(30,30,30,0.8), rgba(18,18,18,0.8));
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.equipe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(45deg, #FFD700, #e6c300);
+    color: #000;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.img-equipe {
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.equipe-card:hover .img-equipe {
+    transform: scale(1.05);
+}
+
+.equipe-card .card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.equipe-card .card-title {
+    color: #FFD700;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.card-position {
+    color: #aaa;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.equipe-card .card-text {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 215, 0, 0.2);
+    color: #FFD700;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #FFD700;
+    color: #000;
+    transform: translateY(-5px);
+}
+
+/* Seção de Estatísticas */
+.stats-section {
+    background-color: #121212;
+    padding: 80px 0;
+    margin-bottom: 60px;
+}
+
+.stat-item {
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 10px;
+    font-family: 'VELISTA', sans-serif;
+}
+
+.stat-text {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Call to action */
+.cta-section {
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.8), rgba(10, 10, 10, 0.95));
+    padding: 80px 0 60px;
+    margin-bottom: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../Imagens/pattern.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.cta-text {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+.btn-agendar {
+    background: linear-gradient(45deg, #FFD700, #e6c300);
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.btn-agendar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+    color: #000;
+}
+
+/* Estilo especial para o botão de agendamento para evitar cortes no brilho */
+.btn-agendar-special {
+    background: linear-gradient(45deg, #FFD700, #e6c300);
+    color: #000;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+    position: relative;
+    overflow: visible;
+    margin: 15px auto;
+    z-index: 5;
+    display: inline-block;
+}
+
+.btn-agendar-special:hover, 
+.btn-agendar-special:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5);
+    color: #000;
+}
+
+.btn-agendar-special:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
+    background: transparent;
+    border-radius: 60px;
+}
+
+.btn-agendar-special:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: transparent;
+    border-radius: 60px;
+    animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding: 50px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.3rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        padding: 40px 0;
+        margin-bottom: 40px;
+    }
+    
+    .quem-somos-section,
+    .mvv-section,
+    .equipe-section {
+        padding: 40px 0;
+        margin-bottom: 40px;
+    }
+    
+    .experience-badge {
+        bottom: -15px;
+        right: 20px;
+        padding: 10px 20px;
+    }
+    
+    .experience-badge .years {
+        font-size: 1.5rem;
+    }
+    
+    .about-content {
+        padding: 0;
+    }
+    
+    .stats-section {
+        padding: 40px 0;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-text {
+        font-size: 1rem;
+    }
+    
+    .cta-title {
+        font-size: 1.8rem;
+    }
+    
+    .cta-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .experience-badge {
+        padding: 8px 15px;
+        right: 15px;
+    }
+    
+    .experience-badge .years {
+        font-size: 1.3rem;
+    }
+    
+    .principio-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .principio-icon i {
+        font-size: 24px;
+    }
+    
+    .img-equipe {
+        height: 220px;
+    }
+    
+    .stat-item {
+        padding: 10px;
+    }
+    
+    .stat-icon {
+        font-size: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .stat-text {
+        font-size: 0.9rem;
+    }
+}

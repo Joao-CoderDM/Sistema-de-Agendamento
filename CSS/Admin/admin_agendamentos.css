@@ -1,0 +1,63 @@
+/* Estilo para o input de data no filtro */
+form .form-control[type="date"] {
+    width: 150px;
+}
+
+/* Estilos para os botões de ação */
+.btn-action {
+    flex-grow: 1;
+    width: 50%;
+}
+
+/* Espaçamento entre grupos de botões */
+.btn-group-gap {
+    margin-top: 0.25rem;
+}
+
+/* Botões no mesmo tamanho */
+.d-flex.gap-2 .btn,
+.d-flex.gap-2 form {
+    flex: 1;
+    min-width: 40px;
+}
+
+/* Estilização adicional para os botões de ação */
+.btn-editar:hover {
+    background-color: #0d6efd;
+    transform: translateY(-2px);
+}
+
+.btn-cancelar:hover {
+    background-color: #dc3545;
+    transform: translateY(-2px);
+}
+
+/* Transição suave para os botões */
+.btn {
+    transition: all 0.3s ease;
+}
+
+/* Removendo bordas internas nos botões de formulário */
+form .btn {
+    border-left: none;
+}
+
+/* Tooltip customizado */
+.custom-tooltip {
+    position: relative;
+}
+
+.custom-tooltip:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10;
+}

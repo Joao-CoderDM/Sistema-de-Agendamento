@@ -1,0 +1,30 @@
+.avatar-circle-sm {
+    width: 32px;
+    height: 32px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+/* Estilos para impressão */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #viewLoyaltyModal, #viewLoyaltyModal * {
+        visibility: visible;
+    }
+    #viewLoyaltyModal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .modal-footer, .btn-close {
+        display: none !important;
+    }
+}

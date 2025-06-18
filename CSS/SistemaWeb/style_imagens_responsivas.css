@@ -1,0 +1,153 @@
+/* Configurações globais para imagens responsivas */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Classes específicas para diferentes tipos de imagens */
+.img-banner {
+    width: 100%;
+    border-radius: 15px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-profissional {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Posições específicas para cada profissional */
+.img-joao {
+    object-position: top center; /* Foco na parte superior (rosto) */
+}
+
+.img-carlos {
+    object-position: center center; /* Foco na parte central */
+}
+
+.img-ana {
+    object-position: center center; /* Foco na parte central */
+}
+
+.img-marcos {
+    object-position: center center; /* Foco na parte central */
+}
+
+.img-fernanda {
+    object-position: center center; /* Foco na parte central */
+}
+
+.img-servico {
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-unidade {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.feedback-card img {
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Responsividade para diferentes tamanhos de tela */
+@media (max-width: 991.98px) {
+    .img-banner {
+        height: 300px;
+    }
+    
+    .img-profissional {
+        height: 220px;
+    }
+    
+    .img-servico {
+        height: 220px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .img-banner {
+        height: 250px;
+    }
+    
+    .img-profissional {
+        height: 200px;
+    }
+    
+    /* Manter o foco nas imagens dos profissionais mesmo em telas menores */
+    .img-joao {
+        object-position: top center;
+    }
+    
+    .img-carlos {
+        object-position: center center;
+    }
+    
+    .img-ana {
+        object-position: center center;
+    }
+    
+    .img-marcos {
+        object-position: center center;
+    }
+    
+    .img-fernanda {
+        object-position: center center;
+    }
+    
+    .img-servico {
+        height: 200px;
+    }
+    
+    .img-unidade {
+        height: 10rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .img-banner {
+        height: 200px;
+    }
+    
+    .img-profissional {
+        height: 180px;
+    }
+    
+    /* Ajuste refinado para telas muito pequenas */
+    .img-joao {
+        object-position: top center; /* Mantém foco no rosto */
+    }
+    
+    .img-carlos {
+        object-position: center center; /* Foco na parte central */
+    }
+    
+    .img-ana {
+        object-position: center center; /* Foco na parte central */
+    }
+    
+    .img-marcos {
+        object-position: center center; /* Foco na parte central */
+    }
+    
+    .img-fernanda {
+        object-position: center center; /* Foco na parte central */
+    }
+    
+    .img-servico {
+        height: 180px;
+    }
+    
+    .img-unidade {
+        height: 9rem;
+    }
+}
